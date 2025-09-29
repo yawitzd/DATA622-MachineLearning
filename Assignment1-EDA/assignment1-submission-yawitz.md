@@ -4,27 +4,27 @@
 
 # EDA
 ### Some key findings
-The target variable is unbalanced.
-![Proportion of subscribed](images/subscribed_prop.png)
-
-Many features are colinear
-![Colinear plots](images/corrplot.png)
-
-
-There are similarities within job/education classes, which indicates we can combine them.
-
-![Job plots](images/jobsplits.png)
-![Education plots](images/educationsplits.png)
-
 There are other artifacts I need to address:
+* The target variable is unbalanced.
+* Many features are colinear
 * booleans are coded as yes/no/unknown
 * `pdays` uses 999 as an unknown
-* `job` and `education` both are multiclass variables with 5+ classes. `contact` only has two classes
+* `job` and `education` both are multiclass variables with 5+ classes. `contact` only has two classes. But these classes can be combined
 * `default`, `housing`, `loan` have null values
 * Many of the economic variables are colinear
 * `poutcome` and `pdays` have >85% null values
 * `campaign` is a skewed distribution
 * Time values like `month` and `day` are strings
+
+![Proportion of subscribed](images/subscribed_prop.png)
+
+![Colinear plots](images/corrplot.png)
+
+
+
+![Job plots](images/jobsplits.png)
+![Education plots](images/educationsplits.png)
+
 
 # Algorithm Selection
 
